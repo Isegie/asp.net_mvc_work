@@ -1,0 +1,42 @@
+﻿@model Popis.Models.Predmet
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Predmet</h4>
+<hr />
+<div class="row" style="background-color:tan;">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+         
+            <div class="form-group">
+                <label asp-for="NAZIV" class="control-label"></label>
+                <input asp-for="NAZIV" class="form-control" />
+                <span asp-validation-for="NAZIV" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BROJ_ECTS_PREDMET" class="control-label"></label>
+                <input asp-for="BROJ_ECTS_PREDMET" class="form-control" />
+                <span asp-validation-for="BROJ_ECTS_PREDMET" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="godinaStudija" class="control-label"></label>
+                <input asp-for="godinaStudija" class="form-control" />
+                <span asp-validation-for="godinaStudija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

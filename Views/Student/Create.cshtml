@@ -1,0 +1,63 @@
+﻿@model Popis.Models.Student
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Izradi novog studenta</h2>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="BROJ_ECTS" class="control-label"></label>
+                <input asp-for="BROJ_ECTS" class="form-control" />
+                <span asp-validation-for="BROJ_ECTS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DATUM_RODENJA" class="control-label"></label>
+                <input asp-for="DATUM_RODENJA" class="form-control" />
+                <span asp-validation-for="DATUM_RODENJA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JMBAG" class="control-label"></label>
+                <input asp-for="JMBAG" class="form-control" />
+                <span asp-validation-for="JMBAG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IME" class="control-label"></label>
+                <input asp-for="IME" class="form-control" />
+                <span asp-validation-for="IME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PREZIME" class="control-label"></label>
+                <input asp-for="PREZIME" class="form-control" />
+                <span asp-validation-for="PREZIME" class="text-danger"></span>
+            </div>
+         
+            <div class="form-group"> <label class="control-label">Fakulteti</label>
+            <select asp-for="Fakultet1"
+            asp-items="ViewBag.OdbrFakulteti" class="form-control">
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="OIB" class="control-label"></label>
+                <input asp-for="OIB" class="form-control" />
+                <span asp-validation-for="OIB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Vrati se na listu studenata</a>
+</div>
+

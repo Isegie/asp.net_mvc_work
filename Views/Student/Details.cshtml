@@ -1,0 +1,62 @@
+﻿@model Popis.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalji</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BROJ_ECTS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BROJ_ECTS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DATUM_RODENJA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DATUM_RODENJA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JMBAG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JMBAG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IME)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IME)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PREZIME)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PREZIME)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OIB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OIB)
+        </dd>
+  
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Uredi", new {  id = Model.ID }) |
+    <a asp-action="Index">Vrati se</a>
+</div>

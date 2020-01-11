@@ -1,0 +1,26 @@
+﻿@model Popis.Models.Fakultet
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalji</h2>
+
+<div>
+    <h4>Fakultet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+ 
+        <dt>
+            @Html.DisplayNameFor(model => model.NAZIV)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NAZIV)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Uredi</a> |
+    <a asp-action="Index">Vrati se na listu fakulteta</a>
+</div>

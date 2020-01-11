@@ -1,0 +1,71 @@
+﻿@model Popis.Models.Student
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BROJ_ECTS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BROJ_ECTS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DATUM_RODENJA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DATUM_RODENJA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JMBAG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JMBAG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fakultet_Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fakultet_Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Smjer_Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Smjer_Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IME)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IME)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PREZIME)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PREZIME)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OIB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OIB)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        @Html.ActionLink("Delete", "Izbriši", new { id = Model.ID })
+        <a asp-action="Index">Vrati se</a>
+    </form>
+</div>

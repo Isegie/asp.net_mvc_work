@@ -1,0 +1,16 @@
+﻿
+@model Projektni_Zadatak.Models.StudentFilterModel
+
+
+<form asp-action="Pretraga" method="post" class="form-inline">
+    <div class="form-group">
+        <input asp-for="Ime" class="form-control" type="text" placeholder="Ime" />
+    </div>
+    <div class="form-group">
+        <input asp-for="Prezime" class="form-control" type="text" placeholder="Prezime" />
+    </div>
+    <div class="form-group">
+        <input asp-for="Oib" class="form-control" type="text" placeholder="Oib" />
+    </div>
+    <button type="submit" class="btn btn-default">Pretraga</button>
+</form>

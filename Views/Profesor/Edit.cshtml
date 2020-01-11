@@ -1,0 +1,44 @@
+﻿@model Popis.Models.Profesor
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Uredi</h2>
+
+<h4>Profesor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+     
+            <div class="form-group">
+                <label asp-for="IME" class="control-label"></label>
+                <input asp-for="IME" class="form-control" />
+                <span asp-validation-for="IME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PREZIME" class="control-label"></label>
+                <input asp-for="PREZIME" class="form-control" />
+                <span asp-validation-for="PREZIME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OIB" class="control-label"></label>
+                <input asp-for="OIB" class="form-control" />
+                <span asp-validation-for="OIB" class="text-danger"></span>
+            </div>
+         
+            <div class="form-group">
+                <input type="submit" value="Spremi" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Vrati se na listu profesora</a>
+</div>
+

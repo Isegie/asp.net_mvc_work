@@ -1,0 +1,39 @@
+﻿@model Popis.Models.Profesor
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalji profesora</h2>
+
+<div>
+    <h4>Profesor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+   
+        <dt>
+            @Html.DisplayNameFor(model => model.IME)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IME)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PREZIME)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PREZIME)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OIB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OIB)
+        </dd>
+  
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Uredi profesora</a> |
+    <a asp-action="Index">Vrati se na listu profesora</a>
+</div>
